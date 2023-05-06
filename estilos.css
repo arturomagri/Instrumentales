@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.presentacion {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0;
+  background-image: url(imagen-Copy.jpg);
+}
+
+.presentacion img {
+  margin: 20px;
+  background-color: blue;
+  width: 33.33%;
+  height: auto;
+  border-radius: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.presentacion .info {
+  background: #0F2027;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  color: antiquewhite;
+  width: 66.67%;
+  padding: 70px;
+  margin: 20px;
+  border-radius: 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  font-family: 'Castoro Titling', cursive;
+  line-height: 50px;
+}
+
+.presentacion h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.presentacion p {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.contenido {
+  background-color: aliceblue;
+}
+
+a {
+  color: aliceblue;
+}
