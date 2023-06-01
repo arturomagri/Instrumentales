@@ -27,8 +27,8 @@
 }
 
 .navbar-navms-auto {
-  grid-template-areas: 
-  "Home Music Research";
+  grid-template-areas:
+    "Home Music Research";
 }
 
 .imag {
@@ -47,7 +47,7 @@
   background-size: cover;
 }
 
-.centrado{
+.centrado {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -114,36 +114,53 @@ a {
   border-radius: 4%;
 }
 
-#contact {
-    background-color: rgb(26, 72, 151);
-    display: grid;
-    grid-template: auto 100px / 700px;
-    justify-content: center;
-    align-content: center;
-    box-sizing: border-box;
+.contacto {
+  background: #0F2027;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: grid;
+  grid-template: auto 100px / 700px;
+  justify-content: center;
+  align-content: center;
+  box-sizing: border-box;
+  font-family: 'Castoro Titling', cursive;
+  text-shadow: 1px 1px 1px black;
+  line-height: 50px
 }
 
-#contact form {
-    padding: 20px;
-    color: white;
-    display: grid;
-    gap: 15px;
-    grid-template: auto / auto;
-    align-items: center;
-    box-sizing: border-box;
+.contacto h2 {
+  font-family: 'Rock Salt', cursive;
+  font-weight: normal;
 }
 
-#contact form input,
-#contact form textarea {
-    padding: 20px 10px;
-    box-sizing: border-box;
-    font-size: 18px;
-    border-radius: 5px;
-    border: none;
-    width: 100%;
+.contacto a {
+  opacity: 0%;
 }
 
-#contact form button[type="submit"] {
+.contacto form {
+  padding: 20px;
+  color: white;
+  display: grid;
+  gap: 15px;
+  grid-template: auto / auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contacto form input,
+.contacto form textarea {
+  padding: 20px 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.contacto form button[type="submit"] {
   background-color: #67ca50;
   font-weight: bold;
   font-size: 28px;
