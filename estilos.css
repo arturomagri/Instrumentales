@@ -114,6 +114,41 @@ a {
   border-radius: 4%;
 }
 
+#contact {
+    background-color: rgb(26, 72, 151);
+    display: grid;
+    grid-template: auto 100px / 700px;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+}
+
+#contact form {
+    padding: 20px;
+    color: white;
+    display: grid;
+    gap: 15px;
+    grid-template: auto / auto;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 20px 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+}
+
+#contact form button[type="submit"] {
+  background-color: #67ca50;
+  font-weight: bold;
+  font-size: 28px;
+}
+
 @media all and (min-width: 600px) {
   .imag {
     flex: 1;

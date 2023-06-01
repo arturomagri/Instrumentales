@@ -12,43 +12,65 @@
     href="https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Rock+Salt&family=Work+Sans:wght@500&display=swap"
     rel="stylesheet">
 
-  <title>Criollos/title>
+  <title>Criollos</title>
 
   <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
 
-
-  <div class="presentacion">
-    <div class="imag">
-      <img src="imagen.jpg" alt="Mi foto">
-      <div class="centrado">
-        Criollos
+  <section>
+    <div class="presentacion">
+      <div class="imag">
+        <img src="imagen.jpg" alt="Mi foto">
+        <div class="centrado">
+          Criollos
+          <br>
+          <p>Música popular argentina freída por los tiempos que corren</p>
+        </div>
+      </div>
+      <div class="info">
+        <h1>Criollos // r2</h1>
         <br>
-        <p>Música popular argentina freída por los tiempos que corren</p>
+        <p>01. Intro amanecida</p>
+        <a href="22-01-05 Manchay Puito.mp3" class="link" target="_blank">
+          <p>02. Manchay Puito</p>
+        </a>
+        <a href="23-05-01 cancion del brujito.mp3" class="link" target="_blank">
+          <p>03. Canción del brujito</p>
+        </a>
+        <a href="23-05-17 nevando esta.mp3" class="link" target="_blank">
+          <p>04. Nevando está</p>
+        </a>
+        <a href="23-05-07 de la laguna.mp3" class="link" target="_blank">
+          <p>05. De la laguna</p>
+        </a>
       </div>
     </div>
-    <div class="info">
-      <h1>Criollos // r2</h1>
-      <br>
-      <p>01. Intro amanecida</p>
-      <a href="22-01-05 Manchay Puito.mp3" class="link" target="_blank">
-        <p>02. Manchay Puito</p>
-      </a>
-      <a href="23-05-01 cancion del brujito.mp3" class="link" target="_blank">
-        <p>03. Canción del brujito</p>
-      </a>
-      <a href="23-05-17 nevando esta.mp3" class="link" target="_blank">
-        <p>04. Nevando está</p>
-      </a>
-      <a href="23-05-07 de la laguna.mp3" class="link" target="_blank">
-        <p>05. De la laguna</p>
-      </a>
-    </div>
-  </div>
+  </section>
 
-  <div class="contacto">Formulario de contacto</div>
+  <section>
+    <div class="contacto">
+      <form id="form" class="form" action="https://formspree.io/f/mnqykqaj" method="POST">
+          <h2 class="tag"><span>HABLEMOS</span></h2>
+
+          <label for="name">Nombre Completo <span>*</span></label>
+          <input name="name" required type="text" id="name">
+
+          <label for="email">Correo electrónico <span>*</span></label>
+          <input name="email" required type="text" id="email">
+
+          <label for="name">Asunto <span>*</span></label>
+          <input name="asunto" required type="text" id="asunto">
+
+          <label for="name">Mensaje <span>*</span></label>
+          <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+          <button type="submit" value="Enviar">Enviar</button>
+      </form>
+      <a href="mailto:arturo.magri@gmail.com" id="trucazo">mail</a>
+  </div>
+  </section>
 </body>
 
 </html>
