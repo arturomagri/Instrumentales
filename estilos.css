@@ -4,16 +4,117 @@
   box-sizing: border-box;
 }
 
-.presentacion {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  background-color: #f0f0f0;
+body {
   background-image: url(imagen-Copy.jpg);
   background-size: cover;
   background-position: center center;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: dotted;
+}
+
+.presentacion h1 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Rock Salt', cursive;
+  font-weight: normal;
+  text-shadow: 1px 1px 1px black;
+}
+
+.presentacion p {
+  font-size: 1em;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 1px black;
+}
+
+.tapa {
+  background-color: rgba(23, 22, 24, 0.3);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4%;
+  flex: 1;
+  order: 1;
+  background-image: url(imagen-Copy.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: 'Rock Salt', cursive;
+  color: antiquewhite;
+  text-shadow: 2px 2px 2px black;
+}
+
+.info {
+  background: #0F2027;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: antiquewhite;
+  border-radius: 4%;
+  flex: 2;
+  order: 2;
+  justify-content: center;
+  font-family: 'Castoro Titling', cursive;
+  line-height: 50px;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-family: 'Castoro Titling', cursive;
+  text-shadow: 1px 1px 1px black;
+  line-height: 50px
+}
+
+.contacto a {
+  opacity: 0%;
+}
+
+.formulario {
+  background: #0F2027;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  border-radius: 4%;
+}
+
+.formulario h2 {
+  font-family: 'Rock Salt', cursive;
+  font-weight: normal;
+}
+
+.formulario form {
+  align-self: center;
+  padding: 20px;
+  color: white;
+  display: grid;
+  gap: 15px;
+  grid-template: auto / auto;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.formulario form input,
+.formulario form textarea {
+  padding: 20px 10px;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+.formulario form button[type="submit"] {
+  background-color: #67ca50;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .navbar {
@@ -31,147 +132,81 @@
     "Home Music Research";
 }
 
-.imag {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  order: 1;
-  padding: 5px;
-  margin: 5px;
-  background-color: rgba(80, 45, 115, 0.3);
-  align-items: center;
-  justify-content: center;
-  border-radius: 4%;
-  background-image: url(imagen-Copy.jpg);
-  background-position: center;
-  background-size: cover;
-}
+/* Estilos para pantallas más grandes */
+@media (min-width: 601px) {
+  .presentacion {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+  }
 
-.centrado {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 60px;
-  margin-bottom: 10px;
-  font-family: 'Rock Salt', cursive;
-  font-weight: bold;
-  color: antiquewhite;
-  text-shadow: 2px 2px 2px black;
-}
-
-.centrado p {
-  font-weight: lighter;
-}
-
-.info {
-  background: #0F2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: antiquewhite;
-  padding: 70px;
-  margin: 20px;
-  border-radius: 4%;
-  width: 100%;
-  display: flex;
-  order: 2;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Castoro Titling', cursive;
-  line-height: 50px;
-}
-
-.presentacion h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  font-family: 'Rock Salt', cursive;
-  font-weight: normal;
-  text-shadow: 1px 1px 1px black;
-}
-
-.presentacion p {
-  font-size: 18px;
-  margin-bottom: 5px;
-  text-shadow: 1px 1px 1px black;
-}
-
-.contenido {
-  background-color: aliceblue;
-}
-
-a {
-  color: aliceblue;
-  text-decoration: dotted;
-}
-
-.imag img {
-  width: 100%;
-  margin: 5px;
-  background-color: blue;
-  border-radius: 4%;
-}
-
-.contacto {
-  background: #0F2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  display: grid;
-  grid-template: 100%;
-  justify-content: center;
-  align-content: center;
-  box-sizing: border-box;
-  font-family: 'Castoro Titling', cursive;
-  text-shadow: 1px 1px 1px black;
-  line-height: 50px
-}
-
-.contacto h2 {
-  font-family: 'Rock Salt', cursive;
-  font-weight: normal;
-}
-
-.contacto a {
-  opacity: 0%;
-}
-
-.contacto form {
-  padding: 20px;
-  color: white;
-  display: grid;
-  gap: 15px;
-  grid-template: auto / auto;
-  align-items: center;
-  box-sizing: border-box;
-}
-
-.contacto form input,
-.contacto form textarea {
-  padding: 20px 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  border-radius: 5px;
-  border: none;
-  width: 100%;
-}
-
-.contacto form button[type="submit"] {
-  background-color: #67ca50;
-  font-weight: bold;
-  font-size: 28px;
-}
-
-@media all and (min-width: 600px) {
-  .imag {
-    flex: 1;
+  .tapa {
+    padding: 70px;
+    margin: 35px;
+    height: 70vh;
   }
 
   .info {
-    flex: 2;
+    padding: 70px 30px 70px 30px;
+    margin: 35px;
+    height: 70vh;
+
   }
+
+  .contacto {
+    margin-top: 5vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formulario {
+    width: 85vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+  }
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 600px) {
+  .presentacion {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .tapa {
+    width: 85vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+  }
+
+  .info {
+    width: 85vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    padding: 15px 30px 15px 30px;
+  }
+
+  .contacto {
+    margin-top: 2.5vh;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .formulario {
+    width: 85vw;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+  }
+
+  .formulario form {
+    align-self: center;
+  }
+
 }
