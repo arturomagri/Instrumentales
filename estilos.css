@@ -67,8 +67,10 @@ a {
   padding: 0 20px 0 0;
 }
 
-.header .nav-links li:hover {
+.header .nav-links li:hover,
+.overlay a:hover {
   transform: scale(1.1);
+  transition: all 0.3s ease 0s;
 }
 
 .header .nav-links a {
@@ -245,7 +247,7 @@ a {
     justify-content: center;
     width: 100%;
     padding-top: 10vh;
-
+    height: 100vh;
   }
 
   .tapa {
@@ -269,9 +271,7 @@ a {
   }
 
   .formulario {
-    padding: ;
     width: 85vw;
-    margin: 2.5vw 20px;
     padding: 2.5vh 20px;
   }
 }
