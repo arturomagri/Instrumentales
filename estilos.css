@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +17,99 @@ a {
   text-decoration: dotted;
 }
 
+.header {
+  position: fixed;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  background-color: #1b3039;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  padding: 5px 10%;
+  box-shadow: 22px 22px 22px black;
+
+}
+
+.header .logo {
+  cursor: pointer;
+  order: 3;
+  margin-left: auto;
+}
+
+.header .logo img {
+  height: 45px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.2);
+}
+
+.header nav {
+  order: 1;
+}
+
+.header .nav-links {
+  list-style: none;
+}
+
+.header .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.header .nav-links li:nth-child(1) {
+  font-weight: bolder;
+  display: inline-block;
+  padding: 0 20px 0 0;
+}
+
+.header .nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links a {
+  font-size: 700;
+  color: #eceff1;
+}
+
+.header .nav-links li a:hover {
+  color: #ffbc0e;
+}
+
+.header .btn {
+  order: 2;
+}
+
+.menu {
+  display: none;
+}
+
+.header .btn button, 
+.header .menu button {
+  margin-left: 20px;
+  font-weight: 700;
+  color: #1b3039;
+  padding: 9px 25px;
+  background: #eceff1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover,
+.header .menu button:hover {
+  background-color: #e2f1f8;
+  color: #ffbc0e;
+  transform: scale(1.1);
+}
+
+
+/* Pantalla de presentacion TAPA+Info */
 .presentacion h1 {
   font-size: 2em;
   margin-top: 10px;
@@ -30,6 +125,8 @@ a {
   text-shadow: 1px 1px 1px black;
 }
 
+
+/* TAPA */
 .tapa {
   background-color: rgba(23, 22, 24, 0.3);
   align-items: center;
@@ -44,8 +141,11 @@ a {
   font-family: 'Rock Salt', cursive;
   color: antiquewhite;
   text-shadow: 2px 2px 2px black;
+  box-shadow: 32px 32px 32px black;
 }
 
+
+/* INFO */
 .info {
   background: #0F2027;
   /* fallback for old browsers */
@@ -60,8 +160,11 @@ a {
   justify-content: center;
   font-family: 'Castoro Titling', cursive;
   line-height: 50px;
+  box-shadow: 32px 32px 32px black;
 }
 
+
+/* AREA DE CONTACTO */
 .contacto {
   display: flex;
   justify-content: center;
@@ -83,6 +186,7 @@ a {
   background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-radius: 4%;
+  box-shadow: 32px 32px 32px black;
 }
 
 .formulario h2 {
@@ -140,20 +244,22 @@ a {
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    padding-top: 10vh;
+
   }
 
   .tapa {
     padding: 70px;
     margin: 35px;
     height: 70vh;
+    box-shadow: 32px 32px 32px black;
   }
 
   .info {
     padding: 70px 30px 70px 30px;
     margin: 35px;
     height: 70vh;
-
+    box-shadow: 32px 32px 32px black;
   }
 
   .contacto {
@@ -163,9 +269,10 @@ a {
   }
 
   .formulario {
+    padding: ;
     width: 85vw;
-    margin-top: 2.5vw;
-    margin-bottom: 2.5vw;
+    margin: 2.5vw 20px;
+    padding: 2.5vh 20px;
   }
 }
 
@@ -176,7 +283,8 @@ a {
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    width: 100%;
+    padding-top: 10vh;
   }
 
   .tapa {
@@ -201,12 +309,81 @@ a {
 
   .formulario {
     width: 85vw;
-    margin-top: 2.5vw;
-    margin-bottom: 2.5vw;
+    padding: 2.5vh 20px;
   }
 
   .formulario form {
     align-self: center;
   }
 
+}
+
+@media screen and (max-width: 800px) {
+  .nav-links, .btn {
+    display: none;
+  }
+
+  .menu {
+    display: inherit;
+  }
+}
+
+/* Nav */
+
+.header a {
+  text-decoration: none;
+
+}
+
+.header .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(33, 49, 63, .95);
+  overflow: hidden;
+  transition: all 0.3s ease 0;
+}
+
+.header .overlay .overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0;
+  font-weight: 700;
+  color: #eceff1;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus {
+  color: #ffbc0e;
+}
+
+.header .overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 65px;
+}
+
+@media screen and (max-height:450px) {
+  .header .overlay a {
+    font-size: 20px;
+  }
+
+  .header .overlay .close{
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
