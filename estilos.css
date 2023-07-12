@@ -161,7 +161,7 @@ a {
   order: 2;
   justify-content: center;
   font-family: 'Castoro Titling', cursive;
-  line-height: 50px;
+  line-height: 40px;
   box-shadow: 32px 32px 32px black;
 }
 
@@ -258,7 +258,7 @@ a {
   }
 
   .info {
-    padding: 70px 30px 70px 30px;
+    padding: 60px 30px 60px 30px;
     margin: 35px;
     height: 70vh;
     box-shadow: 32px 32px 32px black;
